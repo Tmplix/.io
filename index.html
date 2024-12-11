@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script src="./static/js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Video Downloader</h1>
+        <form id="downloadForm" method="POST" action="/download">
+            <label for="url">Enter Video URL:</label>
+            <input type="url" id="url" name="url" required>
+            
+            <label for="quality">Select Quality:</label>
+            <select id="quality" name="quality">
+                <option value="best">Best</option>
+                <option value="worst">Worst</option>
+            </select>
+
+            <label for="convert_to">Convert To:</label>
+            <select id="convert_to" name="convert_to">
+                <option value="">None</option>
+                <option value="mp3">MP3</option>
+            </select>
+            
+            <button type="submit">Start Download</button>
+        </form>
+        
+        <div id="statusMessage" class="hidden">
+            <p>Download Status: <span id="status"></span></p>
+        </div>
+    </div>
+</body>
+</html>
